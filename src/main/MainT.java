@@ -26,11 +26,7 @@ public class MainT {
 
         List<Group> groups = List.of(group1, group2);
 
-        groups.stream()
-                .map(Group::getStudents)
-                .flatMap(List::stream).filter(x -> x.getFinalQualifications().stream().mapToInt(y->y).average().getAsDouble() >= 4.0)
-                .map(Student::getName)
-                .forEach(System.out::println);
+
     }
 
 

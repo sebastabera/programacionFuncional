@@ -26,7 +26,6 @@ public class Main {
         }
 
         //DECLARATIVA IMPRIMIR HOMBRES
-        people.stream().filter(x -> MALE.equals(x.getGender())).forEach(System.out::println);
 
         //IMPERATIVA PROMEDIO DE EDADES
         int sumAge = 0;
@@ -37,8 +36,6 @@ public class Main {
         System.out.println(avgAge);
 
         //DECLARATIVA PROMEDIO DE EDADES
-        //students.stream().map(x -> x.getAge()).
-        System.out.println(people.stream().mapToInt(Person::getAge).average());
 
         //IMPERATIVA IMPRIMIR PAISES DE VIAJE
         for (Person person: people){
@@ -47,7 +44,6 @@ public class Main {
             }
         }
 
-        people.stream().map(Person::getTrips).flatMap(List::stream).distinct().forEach(System.out::println);
 
     }
 
